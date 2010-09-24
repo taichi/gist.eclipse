@@ -12,3 +12,7 @@ eclipse update site is
 
 this software under Apache License 2.0
  http://www.apache.org/licenses/LICENSE-2.0.txt
+
+Required Environment
+ eclipse3.6 or higher
+ Java6 (tested by 1.6.0_17 64bit)
