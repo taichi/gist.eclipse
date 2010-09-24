@@ -1,0 +1,8 @@
+gist eclipse integration.
+
+default key settings.
+ Ctrl+5 create private gist
+ Ctrl+6 create public gist
+
+this is a inspired by
+ http://github.com/defunkt/gist.el/blob/master/gist.el

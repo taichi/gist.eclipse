@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Gist"
+            id="org.handwerkszeug.gist.commands.category">
+      </category>
+      <command
+            categoryId="org.handwerkszeug.gist.commands.category"
+            id="org.handwerkszeug.gist.commands.privateGistCommand"
+            name="Private Gist">
+      </command>
+      <command
+            categoryId="org.handwerkszeug.gist.commands.category"
+            id="org.handwerkszeug.gist.commands.publicGistCommand"
+            name="Public Gist">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="org.handwerkszeug.gist.commands.privateGistCommand"
+            class="org.handwerkszeug.gist.handlers.PrivateGistHandler">
+      </handler>
+      <handler
+            commandId="org.handwerkszeug.gist.commands.publicGistCommand"
+            class="org.handwerkszeug.gist.handlers.PublicGistHandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="org.handwerkszeug.gist.commands.privateGistCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+5"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="org.handwerkszeug.gist.commands.publicGistCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <menu
+               id="org.handwerkszeug.gist.menus.gist"
+               label="Gist">
+            <command
+                  commandId="org.handwerkszeug.gist.commands.publicGistCommand"
+                  label="Public Gist">
+            </command>
+            <command
+                  commandId="org.handwerkszeug.gist.commands.privateGistCommand"
+                  label="Private Gist">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.handwerkszeug.gist.preferences.GistPreferencePage"
+            id="org.handwerkszeug.gist.preference"
+            name="Gist">
+      </page>
+   </extension>
+
+</plugin>
