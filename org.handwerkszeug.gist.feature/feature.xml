@@ -2,14 +2,13 @@
 <feature
       id="org.handwerkszeug.gist"
       label="gist.eclipse"
-      version="0.0.1"
+      version="0.0.2"
       provider-name="taichi">
 
-   <description>
+   <description url="http://github.com/taichi/gist.eclipse">
       gist eclipse integration.
-
-this is a inspired by
- http://github.com/defunkt/gist.el/blob/master/gist.el
+this is a inspired by gist.el
+http://github.com/defunkt/gist.el/blob/master/gist.el
    </description>
 
    <copyright url="http://www.apache.org/licenses/LICENSE-2.0.txt">
@@ -471,7 +470,7 @@ limitations under the License.
          id="org.handwerkszeug.gist"
          download-size="0"
          install-size="0"
-         version="0.0.1"
+         version="0.0.2"
          unpack="false"/>
 
 </feature>
